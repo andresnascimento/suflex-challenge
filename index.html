@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>suflex-challenge</title>
+  </head>
+  <body>
+    <main class="stage" role="main">
+      <section
+        class="device"
+        id="device"
+        aria-label="Tela do aplicativo Suflex"
+      >
+        <header class="appbar">
+          <div class="appbar__brand">
+            <button class="appbar__menu" aria-label="Abrir menu">☰</button>
+            <span class="appbar__logo">suflex</span>
+          </div>
+          <div class="appbar__avatar" aria-label="Usuário">S</div>
+        </header>
+
+        <div class="subheader">
+          <span class="subheader__label">Suflex</span>
+          <span class="tag tag--unidade">unidade</span>
+        </div>
+
+        <button class="back" aria-label="Voltar">
+          <span aria-hidden="true">‹</span>
+          <span>Voltar</span>
+        </button>
+
+        <section class="supplier" aria-labelledby="supplier-name">
+          <h1 id="supplier-name" class="supplier__name">Fornecedor XPTO</h1>
+        </section>
+
+        <div class="progress" aria-label="Progresso da conferência">
+          <div
+            class="progress__bar"
+            role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="16"
+            id="progress-bar"
+          >
+            <div
+              class="progress__fill"
+              id="progress-fill"
+              style="width: 16.66%"
+            ></div>
+          </div>
+        </div>
+
+        <button
+          class="counter"
+          id="counter"
+          aria-label="Abrir lista de itens já decididos"
+        >
+          <span id="counter-text">2 de 12 itens</span>
+        </button>
+
+        <section
+          class="card-arena"
+          id="card-arena"
+          aria-live="polite"
+        ></section>
+
+        <footer class="actions">
+          <button class="btn btn--reject" id="btn-reject">
+            <span>Rejeitar</span>
+            <span aria-hidden="true">✕</span>
+          </button>
+          <button class="btn btn--approve" id="btn-approve">
+            <span>Aprovar</span>
+            <span aria-hidden="true">✓</span>
+          </button>
+        </footer>
+
+        <div class="toast" id="toast" role="status" aria-live="polite">
+          <div class="toast__msg">
+            <span class="toast__strong" id="toast-strong">Item — ação</span>
+            <span class="toast__timer" id="toast-timer">desfaz em 8s</span>
+          </div>
+          <button class="toast__undo" id="toast-undo">Desfazer</button>
+        </div>
+
+        <div
+          class="drawer-backdrop"
+          id="drawer-backdrop"
+          aria-hidden="true"
+        ></div>
+
+        <aside
+          class="drawer"
+          id="drawer"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="drawer-title"
+          aria-hidden="true"
+        >
+          <div class="drawer__handle" aria-hidden="true"></div>
+          <header class="drawer__header">
+            <h2 id="drawer-title" class="drawer__title">Itens já decididos</h2>
+            <button
+              class="drawer__close"
+              id="drawer-close"
+              aria-label="Fechar lista"
+            >
+              ✕
+            </button>
+          </header>
+          <div class="drawer__body" id="drawer-body"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
