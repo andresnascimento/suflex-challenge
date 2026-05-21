@@ -1,8 +1,8 @@
 import "./style.css";
-import javascriptLogo from "./assets/javascript.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
-import { setupCounter } from "./counter.js";
+// import javascriptLogo from "./assets/javascript.svg";
+// import viteLogo from "./assets/vite.svg";
+// import heroImg from "./assets/hero.png";
+// import { setupCounter } from "./counter.js";
 const ITEMS = [
   {
     id: "i1",
@@ -333,7 +333,7 @@ class DrawerController {
 
     return `
       <section class="group">
-        <h3 class="group__title">${groupTitle} · ${entries.length}</h3>
+        <h3 class="group__title"><span aria-hidden="true">${groupTitle === "Aprovados" ? "✓" : "✕"}</span> ${groupTitle} · ${entries.length} </h3>
         ${itemsHtml}
       </section>
     `;
@@ -383,7 +383,7 @@ class CardRenderer {
     this.arenaEl.innerHTML = `
       <div class="empty-state">
         <p class="empty-state__title">Conferência concluída</p>
-        <p class="empty-state__sub">Os ${totalItems} itens foram decididos.</p>
+        <p class="empty-state__sub">Os ${totalItems} itens foram avaliados.</p>
       </div>
     `;
   }

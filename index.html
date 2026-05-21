@@ -60,11 +60,15 @@
           <span id="counter-text">2 de 12 itens</span>
         </button>
 
-        <section
-          class="card-arena"
-          id="card-arena"
-          aria-live="polite"
-        ></section>
+        <div class="card-wrap">
+          <section
+            class="card-arena"
+            id="card-arena"
+            aria-live="polite"
+          ></section>
+          <div class="card-pile"></div>
+          <div class="card-pile-base"></div>
+        </div>
 
         <footer class="actions">
           <button class="btn btn--reject" id="btn-reject">
@@ -101,7 +105,7 @@
         >
           <div class="drawer__handle" aria-hidden="true"></div>
           <header class="drawer__header">
-            <h2 id="drawer-title" class="drawer__title">Itens já decididos</h2>
+            <h2 id="drawer-title" class="drawer__title">Itens avaliados</h2>
             <button
               class="drawer__close"
               id="drawer-close"

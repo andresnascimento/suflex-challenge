@@ -6,11 +6,11 @@
   --color-text-secondary: #5f5e5a;
   --color-text-muted: #888780;
 
-  --color-surface-page: #f1efe8;
+  --color-surface-page: #e9ecec;
   --color-surface-card: #ffffff;
-  --color-surface-muted: #d3d1c7;
+  --color-surface-muted: #d3d9d9;
   --color-surface-strong: #b4b2a9;
-  --color-surface-inverse: #2c2c2a;
+  --color-surface-inverse: #363f3f;
   --color-surface-inverse-hover: #444441;
 
   --color-border-soft: #d3d1c7;
@@ -176,13 +176,13 @@ body {
 .back {
   background: transparent;
   border: none;
-  padding: var(--space-5) var(--space-6) var(--space-2);
-  font-size: 13px;
+  padding: 20px;
+  font-size: 16px;
   color: #444441;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: var(--space-1);
+  gap: 8px;
   font-family: var(--font-family);
 }
 
@@ -191,7 +191,7 @@ body {
 }
 
 .supplier__name {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--color-text-primary);
   letter-spacing: -0.2px;
@@ -218,10 +218,10 @@ body {
 .counter {
   display: inline-block;
   margin: var(--space-4) var(--space-6) var(--space-5);
-  padding: var(--space-2) var(--space-5);
+  padding: 8px 12px;
   background: var(--color-surface-muted);
-  border-radius: var(--radius-full);
-  font-size: 12px;
+  border-radius: 8px;
+  font-size: 14px;
   color: var(--color-text-primary);
   cursor: pointer;
   border: none;
@@ -244,6 +244,7 @@ body {
   flex: 1;
   position: relative;
   min-height: 0;
+  z-index: 3;
 }
 
 .card {
@@ -267,8 +268,8 @@ body {
 }
 
 .card__photo {
-  width: 92px;
-  height: 92px;
+  width: 100px;
+  height: 100px;
   background: var(--color-surface-page);
   border-radius: var(--radius-md);
   display: flex;
@@ -316,11 +317,12 @@ body {
 .card__skip {
   background: transparent;
   border: none;
-  font-size: 14px;
+  font-size: 16px;
   color: #444441;
   cursor: pointer;
   padding: var(--space-1) var(--space-3);
   font-family: var(--font-family);
+  font-weight: 500;
 }
 
 .card__skip:hover {
@@ -329,7 +331,7 @@ body {
 }
 
 .card__name {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--color-text-primary);
   margin: var(--space-2) 0 var(--space-4);
@@ -337,8 +339,8 @@ body {
 }
 
 .card__meta {
-  font-size: 14px;
-  color: var(--color-text-primary);
+  font-size: 16px;
+  color: #687878;
   line-height: 1.7;
 }
 
@@ -347,8 +349,8 @@ body {
 }
 
 .card__meta--soft {
-  font-size: 13px;
-  color: var(--color-text-secondary);
+  font-size: 16px;
+  color: #687878;
   margin-top: var(--space-2);
   line-height: 1.5;
 }
@@ -360,9 +362,10 @@ body {
 .card__rever-btn {
   background: var(--color-surface-muted);
   border: none;
-  padding: var(--space-3) var(--space-5);
+  padding: 16px 18px;
   border-radius: var(--radius-md);
-  font-size: 13px;
+  font-size: 16px;
+  font-weight: 500;
   color: var(--color-text-primary);
   font-family: var(--font-family);
   cursor: pointer;
@@ -389,11 +392,15 @@ body {
 }
 
 .actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-4);
-  padding: var(--space-5) var(--space-6) var(--space-6);
-  flex-shrink: 0;
+  display: flex;
+  /* grid-template-columns: 1fr 1fr; */
+  gap: 20px;
+  padding: 20px;
+  /* flex-shrink: 0; */
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
 }
 
 .btn {
@@ -426,6 +433,13 @@ body {
   background: var(--color-surface-strong);
 }
 
+.btn--reject,
+.btn--approve {
+  font-size: 24px;
+  padding: 24px;
+  width: stretch;
+}
+
 .btn--approve {
   background: var(--color-surface-inverse);
   color: var(--color-surface-card);
@@ -447,7 +461,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 13px;
+  font-size: 14px;
   opacity: 0;
   transform: translateY(-20px);
   transition:
@@ -483,9 +497,9 @@ body {
   background: transparent;
   border: 0.5px solid var(--color-surface-card);
   color: var(--color-surface-card);
-  padding: var(--space-2) var(--space-5);
+  padding: 12px 18px;
   border-radius: var(--radius-sm);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   font-family: var(--font-family);
   cursor: pointer;
@@ -584,28 +598,29 @@ body {
 }
 
 .group__title {
-  font-size: 11px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 600;
   color: var(--color-text-secondary);
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  margin: 0 0 var(--space-2) var(--space-1);
+  margin: 16px 0;
 }
 
 .decided-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: var(--space-4) var(--space-5);
-  border: 0.5px solid var(--color-border-soft);
+  align-items: flex-start;
+  padding: 16px;
+  border: 1px solid var(--color-border-soft);
   border-radius: var(--radius-md);
-  margin-bottom: var(--space-2);
+  margin-bottom: 16px;
   background: var(--color-surface-card);
-  gap: var(--space-3);
+  gap: 16px;
+  flex-direction: column;
 }
 
 .decided-item__name {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--color-text-primary);
   font-weight: 500;
   flex: 1;
@@ -617,17 +632,17 @@ body {
 
 .decided-item__actions {
   display: flex;
-  gap: var(--space-2);
+  gap: 16px;
   flex-shrink: 0;
 }
 
 .mini-btn {
   background: transparent;
-  border: 0.5px solid var(--color-surface-strong);
+  border: 1px solid var(--color-surface-strong);
   color: #444441;
-  font-size: 11px;
-  padding: var(--space-1) var(--space-3);
-  border-radius: var(--radius-sm);
+  font-size: 16px;
+  padding: 12px 18px;
+  border-radius: 12px;
   cursor: pointer;
   font-family: var(--font-family);
   transition: background var(--transition-fast);
@@ -652,6 +667,7 @@ body {
   border-radius: var(--radius-xl);
   padding: 40px var(--space-6);
   text-align: center;
+  height: 410px;
 }
 
 .empty-state__title {
@@ -663,4 +679,31 @@ body {
 .empty-state__sub {
   font-size: 13px;
   color: var(--color-text-secondary);
+}
+
+.card-wrap {
+  position: relative;
+}
+.card-pile-base,
+.card-pile {
+  height: 390px;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  border-radius: 12px;
+}
+
+.card-pile {
+  width: 82%;
+  background-color: #d3d9d9;
+  z-index: 2;
+  top: 0;
+}
+
+.card-pile-base {
+  width: 72%;
+  background-color: #b5bfbf;
+  z-index: 1;
+  top: 20px;
 }
