@@ -243,7 +243,7 @@ body {
   padding: 0 var(--space-6) var(--space-5);
   flex: 1;
   position: relative;
-  min-height: 530px;
+  min-height: 0;
   z-index: 3;
 }
 
